@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @weather = WeatherApi.new 'Moscow,ru'
     @posts = Post.all
   end
 

@@ -1,3 +1,15 @@
+<aside id="weather-status">
+  Temperature is <%= @weather.temperature %><sup>o</sup>C
+  <% if @weather.weather_conditions.any? %>
+    <p>Conditions:</p>
+    <div>
+      <% @weather.weather_conditions.each do |w| %>
+        <%= "#{w['main']} (#{w['description']})" %><br>
+      <% end %>
+    </div>
+  <% end %>
+</aside>
+
 <h1>Posts</h1>
 
 <%= render @posts %>

@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid={appid}&q=Moscow,ru&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 05 Oct 2017 17:22:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '442'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?q=moscow,ru&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":37.62,"lat":55.75},"weather":[{"id":520,"main":"Rain","description":"light
+        intensity shower rain","icon":"09n"}],"base":"stations","main":{"temp":8,"pressure":997,"humidity":93,"temp_min":8,"temp_max":8},"visibility":10000,"wind":{"speed":5,"deg":200},"clouds":{"all":90},"dt":1507221000,"sys":{"type":1,"id":7325,"message":0.0368,"country":"RU","sunrise":1507174899,"sunset":1507215160},"id":524901,"name":"Moscow","cod":200}'
+    http_version: 
+  recorded_at: Thu, 05 Oct 2017 17:21:57 GMT
+recorded_with: VCR 3.0.3
